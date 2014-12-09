@@ -16,6 +16,9 @@ namespace FlashCardsEngine
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Game());
+            //Now, we need to account for some different variables
+            
         }
+        //
     }
 }

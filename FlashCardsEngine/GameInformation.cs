@@ -21,7 +21,7 @@ namespace FlashCardsEngine
         public static string WindowTitle(string directory)
         {
             var parser = new FileIniDataParser();
-            var data = parser.ReadFile(Path.Combine(directory, Path.DirectorySeparatorChar.ToString(), "Game.ini"));
+            var data = parser.ReadFile(directory + Path.DirectorySeparatorChar.ToString() + "Game.ini");
             return data["Information"]["WindowTitle"];
         }
         /// <summary>
@@ -32,8 +32,8 @@ namespace FlashCardsEngine
         public static bool EnableInputPanel(string directory)
         {
             var parser = new FileIniDataParser();
-            var data = parser.ReadFile(Path.Combine(directory, Path.DirectorySeparatorChar.ToString(), "Game.ini"));
-            return bool.Parse(data["Information"]["WindowTitle"]);
+            var data = parser.ReadFile(directory + Path.DirectorySeparatorChar.ToString() + "Game.ini");
+            return bool.Parse(data["Information"]["AllowInputPanel"]);
         }
         /// <summary>
         /// Gets the list of characters to be shown in the InputCharacters panel
@@ -43,7 +43,7 @@ namespace FlashCardsEngine
         {
             List<KeyValuePair<string, string>> ret = new List<KeyValuePair<string, string>>();
             var parser = new FileIniDataParser();
-            var data = parser.ReadFile(Path.Combine(directory, Path.DirectorySeparatorChar.ToString(), "Game.ini"));
+            var data = parser.ReadFile(directory + Path.DirectorySeparatorChar.ToString() + "Game.ini");
             foreach(var i in data["Input Panel Characters"])
             {
                 KeyValuePair<string, string> kvp = new KeyValuePair<string, string>(i.KeyName, i.Value);

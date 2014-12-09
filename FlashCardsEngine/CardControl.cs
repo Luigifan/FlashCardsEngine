@@ -28,20 +28,39 @@ namespace FlashCardsEngine
             ansCaseSensitive = _ansCaseSensitive;
             game = _game;
             //
-            if (GameInformation.EnableInputPanel(game.CurrentGame) == true)
+            /*if (GameInformation.EnableInputPanel(game.CurrentGame) == true)
             {
                 foreach (ListViewItem del in listView1.Items)
                     del.Remove();
-                foreach (var k in IniInformation.InputCharacters())
+                foreach (var k in GameInformation.InputCharacters())
                 {
                     ListViewItem lvi = new ListViewItem();
                     lvi.Text = k.Key;
                     lvi.SubItems.Add(k.Value);
                     listView1.Items.Add(lvi);
                 }
-            }
-			answerTextBox.Focus ();
+            }*/
+			answerTextBox.Focus();
             //
+        }
+
+        public CardControl()
+        {
+            //technically this is invalid but that's none of my business
+            Font = SystemFonts.MessageBoxFont;
+            InitializeComponent();
+        }
+
+        public string AnswerTextBoxValue
+        {
+            get
+            {
+                return answerTextBox.Text;
+            }
+            set
+            {
+                answerTextBox.AppendText(value.ToString());
+            }
         }
 
         public void IsCorrect()
@@ -99,5 +118,6 @@ namespace FlashCardsEngine
                 IsCorrect();
             }
         }
+         
     }
 }
