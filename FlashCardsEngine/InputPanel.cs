@@ -32,6 +32,8 @@ namespace FlashCardsEngine
             {
                 game.cc.AnswerTextBoxValue = listView1.SelectedItems[0].Text;
             }
+            game.Focus();
+            game.cc.answerTextBox.Focus();
         }
         //
     }
