@@ -17,9 +17,11 @@ namespace FlashCardsEngine
     public partial class Game : Form
     {
         public string CurrentGame = null;
+        bool hasIcon = false;
         List<KeyValuePair<string, string>> vals = new List<KeyValuePair<string, string>>();
         LogHandler lh = new LogHandler();
         public CardControl cc = new CardControl();
+
         //
         Random ran_KeyOrValue = new Random(); //A value = 0 or 1 as to whether or not to show key and ask for value, or show value and ask for key.
         Random ran_Key = new Random(DateTime.Now.Millisecond); //which key to use, from the ini
@@ -108,12 +110,25 @@ namespace FlashCardsEngine
         {
             if (GameInformation.EnableInputPanel(CurrentGame) == true)
             {
+
                 InputPanel ip = new InputPanel(GameInformation.InputCharacters(CurrentGame), this);
                 ip.Location = new Point(this.Location.X + this.Width + 5, this.Location.Y);
                 ip.Show();
-                ip.Location = new Point(this.Location.X + this.Width + 5, this.Location.Y);
+                //ip.Location = new Point(this.Location.X + this.Width + 5, this.Location.Y);
             }
             this.Text = GameInformation.WindowTitle(CurrentGame);
+            if (GameInformation.CustomIcon(CurrentGame) != null)
+            { 
+                this.Icon = GameInformation.CustomIcon(CurrentGame);
+                this.ShowIcon = true;
+                hasIcon = true;
+            }
+            else
+            {
+                this.Icon = SystemIcons.WinLogo;
+                this.ShowIcon = false;
+                hasIcon = false;
+            }
         }
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)

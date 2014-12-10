@@ -51,6 +51,20 @@ namespace FlashCardsEngine
             }
             return ret;
         }
+
+        public static System.Drawing.Icon CustomIcon(string directory)
+        {
+            try
+            {
+                System.Drawing.Icon ico = new System.Drawing.Icon(directory + Path.DirectorySeparatorChar.ToString() + "Game.ico");
+                return ico;
+            }
+            catch(FileNotFoundException fx)
+            {
+                Console.WriteLine("[DEBUG]: Icon not found in game {0} ({1})", directory, fx.Message);
+                return null;
+            }
+        }
         //
     }
 }

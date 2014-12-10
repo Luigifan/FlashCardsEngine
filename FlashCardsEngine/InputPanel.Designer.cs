@@ -73,6 +73,7 @@
             this.Name = "InputPanel";
             this.Opacity = 0.75D;
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Input Panel";
             this.ResumeLayout(false);
 
