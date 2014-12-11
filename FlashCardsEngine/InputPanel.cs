@@ -25,6 +25,11 @@ namespace FlashCardsEngine
                 listView1.Items.Add(lvi);
             }
         }
+        public InputPanel()
+        {
+            Font = SystemFonts.MessageBoxFont;
+            InitializeComponent();
+        }
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
