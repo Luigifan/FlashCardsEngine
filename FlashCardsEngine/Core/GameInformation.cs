@@ -75,7 +75,7 @@ namespace FlashCardsEngine
             {
                 try
                 {
-                    MessageBox.Show(string.Format("RUNTIME ERROR IN {0}\n\nStack trace: {0}\nPlease contact the author of this game for a fix.\nPlease click 'OK' so the game can crash", WindowTitle(directory),idx.Message), 
+                    MessageBox.Show(string.Format("RUNTIME ERROR IN '{0}'\n\nStack trace: {1}\nPlease contact the author of this game for a fix.\nPlease click 'OK' so the game can crash", WindowTitle(directory),idx.Message), 
                         "Critical Error", 
                         MessageBoxButtons.OK, 
                         MessageBoxIcon.Exclamation);
@@ -114,7 +114,7 @@ namespace FlashCardsEngine
             {
                 try
                 {
-                MessageBox.Show(string.Format("RUNTIME ERROR IN {0}\n\nStack Trace: {1}\nPlease contact the author of this game for a fix.\nPlease click 'OK' so the game can crash.", WindowTitle(directory), idx.Message), 
+                MessageBox.Show(string.Format("RUNTIME ERROR IN '{0}'\n\nStack Trace: {1}\nPlease contact the author of this game for a fix.\nPlease click 'OK' so the game can crash.", WindowTitle(directory), idx.Message), 
                     "Critical Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 Environment.Exit(-6);
                 }

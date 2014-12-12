@@ -56,7 +56,7 @@ namespace FlashCardsEngine
                 //
                 if(GameInformation.Author(game.CurrentGame) != null)
                 {
-                    authorLabel.Text = "by " + GameInformation.WindowTitle(game.CurrentGame);
+                    authorLabel.Text = "by " + GameInformation.Author(game.CurrentGame);
                     hasCustomInfo = true;
                 }
                 else

@@ -125,6 +125,7 @@ namespace FlashCardsEngine
             {
                 ip = new InputPanel(GameInformation.InputCharacters(CurrentGame), this);
                 ip.Show();
+                ip.Size = new Size(ip.Width, this.Height);
                 ip.Location = new Point(this.Location.X + this.Width + 1, this.Location.Y);
             }
             this.Text = GameInformation.WindowTitle(CurrentGame);
@@ -182,7 +183,10 @@ namespace FlashCardsEngine
 
         private void Game_LocationChanged(object sender, EventArgs e)
         {
-            ip.Location = new Point(this.Location.X + this.Width + 1, this.Location.Y);
+            if(this.WindowState != FormWindowState.Maximized)
+            {
+                ip.Location = new Point(this.Location.X + this.Width + 1, this.Location.Y);
+            }
         }
         //
     }
