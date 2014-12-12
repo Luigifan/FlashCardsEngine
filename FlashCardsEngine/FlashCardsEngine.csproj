@@ -55,52 +55,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CardControl.cs">
+    <Compile Include="UI\CardControl.cs">
       <SubType>usercontrol</SubType>
     </Compile>
-    <Compile Include="CardControl.designer.cs">
+    <Compile Include="UI\CardControl.designer.cs">
       <DependentUpon>CardControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="DetectOperatingSystem.cs" />
-    <Compile Include="Game.cs">
+    <Compile Include="Core\DetectOperatingSystem.cs" />
+    <Compile Include="UI\Game.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Game.Designer.cs">
+    <Compile Include="UI\Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameInformation.cs" />
-    <Compile Include="Help.cs">
+    <Compile Include="Core\GameInformation.cs" />
+    <Compile Include="UI\Help.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Help.Designer.cs">
+    <Compile Include="UI\Help.Designer.cs">
       <DependentUpon>Help.cs</DependentUpon>
     </Compile>
-    <Compile Include="InputPanel.cs">
+    <Compile Include="UI\InputPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InputPanel.Designer.cs">
+    <Compile Include="UI\InputPanel.Designer.cs">
       <DependentUpon>InputPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogHandler.cs" />
+    <Compile Include="Core\LogHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SelectGame.cs">
+    <Compile Include="UI\SelectGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectGame.Designer.cs">
+    <Compile Include="UI\SelectGame.Designer.cs">
       <DependentUpon>SelectGame.cs</DependentUpon>
     </Compile>
-    <Compile Include="TaskDialog.cs" />
-    <EmbeddedResource Include="CardControl.resx">
+    <Compile Include="Etc\TaskDialog.cs" />
+    <EmbeddedResource Include="UI\CardControl.resx">
       <DependentUpon>CardControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Game.resx">
+    <EmbeddedResource Include="UI\Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Help.resx">
+    <EmbeddedResource Include="UI\Help.resx">
       <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InputPanel.resx">
+    <EmbeddedResource Include="UI\InputPanel.resx">
       <DependentUpon>InputPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -113,7 +113,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SelectGame.resx">
+    <EmbeddedResource Include="UI\SelectGame.resx">
       <DependentUpon>SelectGame.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LICENSE" />

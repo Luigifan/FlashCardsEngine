@@ -32,10 +32,10 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.iconPictureBox = new System.Windows.Forms.PictureBox();
-            this.titleText = new System.Windows.Forms.Label();
-            this.authorLabel = new System.Windows.Forms.Label();
             this.aboutRichText = new System.Windows.Forms.RichTextBox();
+            this.authorLabel = new System.Windows.Forms.Label();
+            this.titleText = new System.Windows.Forms.Label();
+            this.iconPictureBox = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -87,16 +87,24 @@
             this.tabPage2.Text = "About";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // iconPictureBox
+            // aboutRichText
             // 
-            this.iconPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.iconPictureBox.Location = new System.Drawing.Point(208, 3);
-            this.iconPictureBox.Name = "iconPictureBox";
-            this.iconPictureBox.Size = new System.Drawing.Size(128, 128);
-            this.iconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.iconPictureBox.TabIndex = 0;
-            this.iconPictureBox.TabStop = false;
-            this.iconPictureBox.Click += new System.EventHandler(this.iconPictureBox_Click);
+            this.aboutRichText.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.aboutRichText.Location = new System.Drawing.Point(3, 209);
+            this.aboutRichText.Name = "aboutRichText";
+            this.aboutRichText.Size = new System.Drawing.Size(542, 117);
+            this.aboutRichText.TabIndex = 3;
+            this.aboutRichText.Text = "";
+            // 
+            // authorLabel
+            // 
+            this.authorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.authorLabel.Location = new System.Drawing.Point(1, 164);
+            this.authorLabel.Name = "authorLabel";
+            this.authorLabel.Size = new System.Drawing.Size(547, 23);
+            this.authorLabel.TabIndex = 2;
+            this.authorLabel.Text = "by Mike Santiago";
+            this.authorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // titleText
             // 
@@ -109,24 +117,16 @@
             this.titleText.Text = "Flash Cards Engine";
             this.titleText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // authorLabel
+            // iconPictureBox
             // 
-            this.authorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.authorLabel.Location = new System.Drawing.Point(1, 164);
-            this.authorLabel.Name = "authorLabel";
-            this.authorLabel.Size = new System.Drawing.Size(547, 23);
-            this.authorLabel.TabIndex = 2;
-            this.authorLabel.Text = "by Mike Santiago";
-            this.authorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // aboutRichText
-            // 
-            this.aboutRichText.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.aboutRichText.Location = new System.Drawing.Point(3, 209);
-            this.aboutRichText.Name = "aboutRichText";
-            this.aboutRichText.Size = new System.Drawing.Size(542, 117);
-            this.aboutRichText.TabIndex = 3;
-            this.aboutRichText.Text = "";
+            this.iconPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconPictureBox.Location = new System.Drawing.Point(208, 3);
+            this.iconPictureBox.Name = "iconPictureBox";
+            this.iconPictureBox.Size = new System.Drawing.Size(128, 128);
+            this.iconPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox.TabIndex = 0;
+            this.iconPictureBox.TabStop = false;
+            this.iconPictureBox.Click += new System.EventHandler(this.iconPictureBox_Click);
             // 
             // Help
             // 
@@ -139,6 +139,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Help";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Help";
             this.tabControl1.ResumeLayout(false);
