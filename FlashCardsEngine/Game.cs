@@ -94,7 +94,17 @@ namespace FlashCardsEngine
             }
             if(directoriesWithGames.Count > 1)
             {
-                //allow user to pick game
+                SelectGame sg = new SelectGame();
+                DialogResult dr = sg.ShowDialog();
+                switch(dr)
+                {
+                    case(DialogResult.OK):
+                        CurrentGame = sg.SelectedGame;
+                        break;
+                    case(DialogResult.Cancel):
+                        Environment.Exit(0);
+                        break;
+                }
             }
             else if(directoriesWithGames.Count == 0)
             {
@@ -126,8 +136,8 @@ namespace FlashCardsEngine
             }
             else
             {
-                this.Icon = SystemIcons.WinLogo;
-                this.ShowIcon = false;
+                this.Icon = FlashCardsEngine.Properties.Resources._128;
+                this.ShowIcon = true;
                 hasIcon = false;
             }
         }
@@ -161,7 +171,7 @@ namespace FlashCardsEngine
 
         private void helpButton_Click(object sender, EventArgs e)
         {
-            Help h = new Help();
+            Help h = new Help(this);
             h.ShowDialog();
         }
 
