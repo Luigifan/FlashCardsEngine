@@ -1,0 +1,5 @@
+﻿-Fix critical errors on EnableInputPanel
+-Make input panel same height as main window
+-Fix maximizing and input panel dying
+-Fix windowtitle being shown in author
+-Write some documentation
